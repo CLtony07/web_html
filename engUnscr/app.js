@@ -208,9 +208,9 @@ class UnscrambleApp {
             },
             {
                 "id": 35,
-                "english": "And if you're a child, and an adult willing to pay you to do something, that's clue that you wouldn't otherwise enjoy doing it.",
+                "english": "And if you're a child, and an adult is willing to pay you to do something, that's a clue that you wouldn't otherwise enjoy doing it.",
                 "korean": "그리고 만약 여러분이 아이인데, 한 어른이 여러분에게 기꺼이 돈을 주며 무언가를 하게 한다면, 그것은 그렇지 않으면 여러분이 그것을 하는 것을 즐기지 않을 것이라는 단서이다.",
-                "words": ["And", "if", "you're", "a", "child,", "and", "an", "adult", "willing", "to", "pay", "you", "to", "do", "something,", "that's", "clue", "that", "you", "wouldn't", "otherwise", "enjoy", "doing", "it."]
+                "words": ["And", "if", "you're", "a", "child,", "and", "an", "adult", "is", "willing", "to", "pay", "you", "to", "do", "something,", "that's", "a", "clue", "that", "you", "wouldn't", "otherwise", "enjoy", "doing", "it."]
             },
             {
                 "id": 36,
