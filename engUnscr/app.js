@@ -94,9 +94,9 @@ class UnscrambleApp {
             },
             {
                 "id": 16,
-                "english": "Thus it is good to have a secondary, detailed processing system that an correct these mistakes.",
+                "english": "Thus it is good to have a secondary, detailed processing system that can correct these mistakes.",
                 "korean": "따라서 이러한 오류를 수정할 수 있는 이차적이고, 세부적인 처리 시스템을 갖추는 것이 좋다.",
-                "words": ["Thus", "it", "is", "good", "to", "have", "a", "secondary,", "detailed", "processing", "system", "that", "an", "correct", "these", "mistakes."]
+                "words": ["Thus", "it", "is", "good", "to", "have", "a", "secondary,", "detailed", "processing", "system", "that", "can", "correct", "these", "mistakes."]
             },
             {
                 "id": 17,
