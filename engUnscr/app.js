@@ -432,18 +432,21 @@ class UnscrambleApp {
     }
 
     checkAnswer() {
-        if (this.selectedWords.length === 0) {
-            this.showFeedback('답안을 작성해주세요.', 'incorrect');
-            return;
-        }
-        
-        // Convert selected words to word list and check with frequency comparison
         const userWords = this.selectedWords.map(wordObj => wordObj.text);
         const correctWords = this.problems[this.currentProblemIndex].words;
-
+        
         const problem = this.problems[this.currentProblemIndex];
         const isCorrect = JSON.stringify(userWords) === JSON.stringify(correctWords);
         
+        if (this.selectedWords.length === 0) {
+            this.showFeedback('답안을 작성해주세요.', 'incorrect', problem.english, problem.korean);
+            return;
+        }
+
+        if (this.completedProblems.has(this.currentProblemIndex)) {
+            this.showFeedback('이미 이 문제를 풀었습니다.', 'correct', problem.english, problem.korean);
+            return;
+        }
         if (isCorrect) {
             this.correctAnswers++;
             this.completedProblems.add(this.currentProblemIndex);
@@ -470,6 +473,12 @@ class UnscrambleApp {
     resetProblem() {
         const problem = this.problems[this.currentProblemIndex];
         
+        // Reset if the problem has already been completed
+        if (this.completedProblems.has(this.currentProblemIndex)) {
+            this.completedProblems.delete(this.currentProblemIndex);
+            this.correctAnswers--;
+        }
+
         // Reset selected words
         this.selectedWords = [];
         this.insertPosition = null;
@@ -502,7 +511,7 @@ class UnscrambleApp {
 
     updateButtons() {
         this.prevBtn.disabled = this.currentProblemIndex === 0;
-        this.nextBtn.disabled = this.currentProblemIndex === this.problems.length - 1;
+        this.nextBtn.disabled = this.currentProblemIndex === this.problems.length;
     }
 
     showCompletionModal() {
